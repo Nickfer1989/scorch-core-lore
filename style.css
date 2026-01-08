@@ -1,0 +1,78 @@
+:root {
+    --gold: #d4af37;
+    --fire: #ff4500;
+    --dark: #050505;
+}
+
+body { margin: 0; background-color: var(--dark); color: white; font-family: 'Cinzel', serif; overflow-x: hidden; }
+
+/* --- HERO (Ajustado) --- */
+.hero-container { position: relative; height: 150vh; width: 100%; }
+.coliseum-bg { 
+    position: fixed; top: 0; left: 0; width: 100%; height: 100vh; 
+    background: url('img/coliseo_base.jpg') no-repeat center center; 
+    background-size: cover; z-index: 1; filter: brightness(0.5); 
+}
+.hero-content-fixed { 
+    position: fixed; top: 0; left: 0; width: 100%; height: 100vh; 
+    display: flex; flex-direction: column; align-items: center; justify-content: center; 
+    z-index: 10; text-align: center; pointer-events: none; 
+}
+.glow-title { font-size: 5rem; color: var(--gold); text-shadow: 0 0 25px var(--fire); margin-top: -12vh; }
+
+.egg-vessel { 
+    width: 320px; height: 320px; 
+    display: flex; align-items: center; justify-content: center;
+    transform: translateY(-20px); 
+    filter: drop-shadow(0 0 30px var(--fire));
+}
+
+.breathing-egg {
+    width: 100%;
+    height: auto;
+    animation: floating-breathing 4s ease-in-out infinite;
+}
+
+@keyframes floating-breathing {
+    0%, 100% { transform: translateY(0) scale(1); filter: drop-shadow(0 0 20px var(--fire)); }
+    50% { transform: translateY(-15px) scale(1.03); filter: drop-shadow(0 0 45px var(--fire)); }
+}
+
+.lore-quote { font-family: 'Lora', serif; font-style: italic; font-size: 1.2rem; color: #f0f0f0; max-width: 700px; margin-top: 50px; }
+
+/* --- TRONCO Y TÍTULOS AMARILLOS --- */
+.tree-section { position: relative; z-index: 20; background: var(--dark); min-height: 400vh; }
+.tree-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('img/arbol_lava.jpg') no-repeat center top; background-size: cover; opacity: 0.4; filter: brightness(0.3); }
+.tree-content { position: relative; max-width: 1000px; margin: 0 auto; padding: 15vh 5%; display: flex; flex-direction: column; }
+.lore-card { width: 100%; max-width: 450px; margin-bottom: 35vh; }
+.card-inner { background: rgba(5, 2, 2, 0.95); border-left: 4px solid var(--fire); padding: 30px; border-radius: 0 15px 15px 0; }
+.card-right { align-self: flex-end; }
+.card-right .card-inner { border-left: none; border-right: 4px solid var(--fire); border-radius: 15px 0 0 15px; }
+
+/* TÍTULOS EN AMARILLO DORADO COMO EL LOGO */
+.chapter-title { 
+    color: var(--gold); 
+    text-shadow: 0 0 15px var(--fire); 
+    font-size: 1.8rem; 
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.cap-label { color: var(--fire); letter-spacing: 3px; font-weight: bold; font-size: 0.9rem; }
+.img-wrapper { margin-top: 20px; border-radius: 10px; overflow: hidden; height: 250px; border: 1px solid rgba(212, 175, 55, 0.2); }
+.card-img { width: 100%; height: 100%; object-fit: cover; filter: brightness(1.1); }
+
+/* --- ALFORJA --- */
+.alforja-container { position: relative; height: 100vh; z-index: 100; background: #000; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.cave-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('img/cueva_alforja.jpeg') no-repeat center center; background-size: cover; filter: brightness(0.5); }
+.alforja-content { position: relative; z-index: 110; width: 100%; max-width: 800px; height: 90vh; display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center; }
+.final-quote { font-family: 'Lora', serif; font-size: 1.1rem; color: #ccc; font-style: italic; }
+.call-to-action-text { font-family: 'Cinzel', serif; color: var(--gold); font-size: 1.5rem; text-shadow: 0 0 15px var(--fire); }
+.coin-vessel { position: relative; display: flex; align-items: center; justify-content: center; transform: translateY(30px); }
+.fire-glow { position: absolute; width: 130px; height: 130px; background: radial-gradient(circle, rgba(255,69,0,0.7) 0%, rgba(255,0,0,0) 70%); border-radius: 50%; filter: blur(15px); animation: pulse-glow 2s ease-in-out infinite; }
+.spinning-coin-fire { width: 140px; filter: drop-shadow(0 0 20px var(--fire)); animation: rotate-y 6s linear infinite; z-index: 2; }
+@keyframes rotate-y { from { transform: rotateY(0deg); } to { transform: rotateY(360deg); } }
+@keyframes pulse-glow { 0%, 100% { transform: scale(1); opacity: 0.4; } 50% { transform: scale(1.4); opacity: 0.8; } }
+.cta-box { display: flex; flex-direction: column; align-items: center; width: 100%; margin-bottom: 20px; }
+.btn-ronin { background: linear-gradient(45deg, #1273ea, #00d4ff); color: white; border: 1px solid white; padding: 15px 45px; font-family: 'Cinzel', serif; font-size: 1.1rem; cursor: pointer; border-radius: 50px; transition: 0.4s; }
+.gas-small { color: #888; font-size: 0.75rem; margin-top: 15px; width: 100%; text-align: center; letter-spacing: 2px; }
