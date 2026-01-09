@@ -1,0 +1,268 @@
+:root {
+    --gold: #d4af37;
+    --fire: #ff4500;
+    --ice: #00d4ff;
+    --dark: #050505;
+}
+
+body { 
+    margin: 0; 
+    background-color: var(--dark); 
+    color: white; 
+    font-family: 'Cinzel', serif; 
+    overflow-x: hidden; 
+}
+
+/* --- HERO --- */
+.hero-container { 
+    position: relative; 
+    height: 115vh; 
+    width: 100%; 
+    z-index: 5; 
+}
+.coliseum-bg { 
+    position: fixed; 
+    top: 0; left: 0; 
+    width: 100%; 
+    height: 100vh; 
+    background: url('img/coliseo_base.jpg') no-repeat center center;
+    background-size: cover; 
+    z-index: 1; 
+    filter: brightness(0.4); 
+}
+.hero-content-fixed { 
+    position: fixed; 
+    top: 0; left: 0; 
+    width: 100%; 
+    height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    z-index: 10; 
+    text-align: center; 
+    pointer-events: none; 
+}
+
+.glow-title { 
+    font-family: 'Lora', serif; 
+    font-size: 5.5rem; 
+    font-weight: 700; 
+    margin: 0; 
+    background: linear-gradient(to bottom, #ff8c00 20%, #ff4500 50%, #8b0000 90%); -webkit-background-clip: text; 
+    background-clip: text; -webkit-text-fill-color: transparent; 
+    filter: drop-shadow(0 0 15px rgba(255, 69, 0, 0.6)); 
+    letter-spacing: 2px; 
+}
+.protocol-subtitle { 
+    font-family: 'Lora', serif; 
+    font-size: 2.2rem; 
+    font-style: italic; 
+    color: #e2a05d; 
+    margin-top: -10px; 
+    letter-spacing: 12px; 
+}
+
+/* PROTECTORES: Espacio ampliado para el huevo grande */
+.hero-vessel-main { 
+    position: relative; 
+    display: flex; 
+    align-items: flex-end; 
+    justify-content: center; 
+    gap: 480px; /* Aumentado para que el huevo grande no los toque */
+    z-index: 15; 
+    transform: translateY(125px); 
+    pointer-events: auto; 
+    height: 400px; 
+    width: 100%; 
+}
+
+.water-side .guardian-miner { 
+    width: 220px; 
+    height: auto; 
+    filter: drop-shadow(0 0 25px var(--ice)); 
+}
+.fire-side .guardian-miner { 
+    width: 220px; 
+    height: auto; 
+    filter: drop-shadow(0 0 25px var(--fire)); 
+}
+
+/* HUEVO IMPONENTE: Agrandado a 380px */
+.egg-vessel { 
+    position: absolute; 
+    bottom: 110px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 380px; /* Tamaño aumentado significativamente */
+    z-index: 20; 
+}
+.breathing-egg { 
+    width: 100%; 
+    height: auto; 
+    filter: drop-shadow(0 0 60px var(--fire)); /* Resplandor más fuerte */
+    animation: floating-subtle 4s ease-in-out infinite; 
+}
+
+.lore-quote { 
+    font-family: 'Lora', serif; 
+    font-style: italic; 
+    font-size: 1.1rem; 
+    max-width: 650px; 
+    margin-top: 150px; 
+    text-shadow: 0 2px 10px black; 
+}
+
+/* --- HISTORIA (900PX FIJOS) --- */
+.tree-section { 
+    position: relative; 
+    z-index: 20; 
+    background-color: var(--dark); 
+    min-height: 250vh; 
+}
+.tree-background { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: url('img/arbol_lava.jpg') no-repeat center top; 
+    background-size: cover; 
+    opacity: 0.5; 
+    filter: brightness(0.35);
+    z-index: 1; 
+}
+#particle-container { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    pointer-events: none; 
+    z-index: 5; 
+    overflow: hidden; 
+}
+.particle { 
+    position: absolute; 
+    border-radius: 50%; 
+    opacity: 0; 
+    animation: float-particle linear infinite; 
+    filter: blur(1px); }
+
+.tree-content { 
+    position: relative; 
+    max-width: 900px; 
+    margin: 0 auto; 
+    padding: 15vh 20px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15vh; 
+    z-index: 30; 
+}
+.lore-card-full { 
+    display: flex; 
+    background: rgba(10, 10, 10, 0.95); 
+    border: 1px solid rgba(212, 175, 55, 0.3); 
+    border-radius: 20px; 
+    overflow: hidden; 
+    height: 450px; 
+    width: 900px; 
+    backdrop-filter: blur(10px); 
+}
+.lore-card-full.reverse { 
+    flex-direction: row-reverse; 
+}
+.card-text { 
+    flex: 1.3; 
+    padding: 40px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+}
+.chapter-title { 
+    color: var(--gold); 
+    font-size: 1.9rem; 
+    margin-bottom: 12px; 
+    text-shadow: 0 0 10px var(--fire), 0 0 2px black; }
+.card-text p { 
+    font-family: 'Lora', serif; 
+    font-size: 1.1rem; 
+    line-height: 1.6; 
+    color: #eee; margin: 0; 
+}
+.card-image { 
+    flex: 1; 
+    height: 100%; }
+.card-image img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+/* --- ALFORJA --- */
+.alforja-container { 
+    position: relative;
+    height: 100vh; 
+    z-index: 30; 
+    background: #000; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden; 
+}
+.cave-bg { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: url('img/cueva_alforja.jpeg') no-repeat center center; 
+    background-size: cover; 
+    filter: brightness(0.4); 
+}
+.alforja-content { 
+    position: relative; 
+    z-index: 110; 
+    width: 100%; 
+    max-width: 950px; 
+    height: 85vh; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: space-around; 
+    text-align: center; 
+}
+.final-quote { 
+    font-family: 'Lora', serif; 
+    font-style: italic; 
+    font-size: 1.4rem; 
+    color: #ffffff; 
+    text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+.highlight-gold { 
+    color: var(--gold) !important; 
+    text-shadow: 0 0 15px var(--fire), 0 0 2px black; }
+.spinning-coin-fire { 
+    width: 140px; 
+    filter: drop-shadow(0 0 25px var(--fire));
+     animation: coin-float-rotate 6s ease-in-out infinite; }
+.btn-ronin { 
+    background: linear-gradient(45deg, #1273ea, #00d4ff); 
+    color: white; padding: 18px 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 1px solid white;
+    font-family: 'Cinzel';
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    pointer-events: auto;
+ }
+.gas-small { 
+    font-family: 'Lora', serif; 
+    font-size: 0.9rem; color: #888; 
+    letter-spacing: 2px; 
+    margin-top: 10px; }
+
+@keyframes floating-subtle { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+@keyframes float-particle { 0% { transform: translateY(-10vh) scale(0); opacity: 0; } 20% { opacity: 0.8; transform: scale(1); } 100% { transform: translateY(110vh) scale(0.5); opacity: 0; } }
+@keyframes coin-float-rotate { 0% { transform: translateY(0) rotateY(0deg); } 50% { transform: translateY(-25px) rotateY(180deg); } 100% { transform: translateY(0) rotateY(360deg); } }
