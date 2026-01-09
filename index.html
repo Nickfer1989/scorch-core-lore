@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scorch Core | Crónicas del Núcleo Ardiente</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -13,56 +13,61 @@
     <section id="acto1" class="hero-container">
         <div class="coliseum-bg"></div>
         <div class="hero-content-fixed" id="hero-ui">
-            <h1 class="glow-title">SCORCH CORE</h1>
-            <div class="egg-vessel">
-                <img src="img/huevo_hero.png" alt="Huevo Fénix" id="main-egg" class="breathing-egg">
+            <h1 class="glow-title">ScorchCore</h1>
+            <h2 class="protocol-subtitle">Protocol</h2>
+            <div class="hero-vessel-main">
+                <div class="miner-wrapper water-side"><img src="img/coreminer_agua.png" class="guardian-miner"></div>
+                <div class="egg-vessel"><img src="img/huevo_hero.png" id="main-egg" class="breathing-egg"></div>
+                <div class="miner-wrapper fire-side"><img src="img/coreminer_fuego.png" class="guardian-miner"></div>
             </div>
-            <div class="lore-box-hero">
-                <p class="lore-quote">"Millones de héroes yacen en las billeteras como reliquias; su esencia vital atrapada en el letargo mágico de la Eco-Estasis".</p>
-            </div>
+            <p class="lore-quote">"Millones de héroes yacen en las billeteras como reliquias; su esencia vital atrapada en el letargo mágico de la Eco-Estasis".</p>
         </div>
     </section>
 
     <section id="acto2" class="tree-section">
         <div class="tree-background"></div>
+        <div id="particle-container"></div>
         <div class="tree-content">
-            
-            <div class="lore-card card-left" data-aos="fade-right">
-                <div class="card-inner">
-                    <span class="cap-label">CAPÍTULO I</span>
-                    <h2 class="chapter-title">Las Grietas Olvidadas</h2>
-                    <p>"Tras el Gran Cataclismo, las tierras de Lunacia se enfriaron. En lo más profundo, donde la lava aún susurra antiguos secretos, los exploradores descubrieron el ScorchCore: un corazón de energía pura que late bajo la corteza del mundo, esperando ser reclamado".</p>
-                    <div class="img-wrapper"><img src="img/HD_CRISTALIZADOS.png" class="card-img"></div>
+            <div class="lore-row" data-aos="fade-up">
+                <div class="lore-card-full">
+                    <div class="card-text">
+                        <span class="cap-label" style="color: var(--ice);">CAPÍTULO I</span>
+                        <h2 class="chapter-title">Las Grietas Olvidadas</h2>
+                        <p>Tras el Gran Cataclismo, las tierras de Lunacia se sumieron en un invierno espiritual. Incontables guerreros Axie quedaron atrapados en un sueño eterno, olvidados en las profundidades de las billeteras como reliquias de una era pasada. La magia que una vez fluyó por sus venas se cristalizó, esperando un calor que parecía que nunca llegaría hasta que las primeras grietas del ScorchCore comenzaron a latir bajo la tierra.</p>
+                    </div>
+                    <div class="card-image"><img src="img/HD_CRISTALIZADOS.png"></div>
                 </div>
             </div>
-
-            <div class="lore-card card-right" data-aos="fade-left">
-                <div class="card-inner">
-                    <span class="cap-label">CAPÍTULO II</span>
-                    <h2 class="chapter-title">La Alquimia del Renacer</h2>
-                    <p>"Para despertar a los guerreros en estasis, los maestros alquimistas desarrollaron la 'Elemental Forge'. Mediante este ritual sagrado, la esencia vital de un Axie se transmuta y se infunde dentro de una Geoda Alquímica, un receptáculo capaz de contener el calor del Núcleo Ardiente".</p>
-                    <div class="img-wrapper"><img src="img/BESTIA _ECO_ESTASIS.png" class="card-img"></div>
+            <div class="lore-row" data-aos="fade-up">
+                <div class="lore-card-full reverse">
+                    <div class="card-text">
+                        <span class="cap-label" style="color: var(--fire);">CAPÍTULO II</span>
+                        <h2 class="chapter-title">La Alquimia del Renacer</h2>
+                        <p>Para canalizar el poder indomable del núcleo, los maestros artesanos diseñaron la "Elemental Forge". Mediante este ritual, la esencia vital del Axie es transmutada e infundida en Geodas Alquímicas, recipientes de energía pura que laten al ritmo del volcán. Ya no son solo guerreros del pasado, sino la semilla de una nueva estirpe diseñada para prosperar en las condiciones más extremas de las minas.</p>
+                    </div>
+                    <div class="card-image"><img src="img/BESTIA _ECO_ESTASIS.png"></div>
                 </div>
             </div>
-
-            <div class="lore-card card-left" data-aos="fade-right">
-                <div class="card-inner">
-                    <span class="cap-label">CAPÍTULO III</span>
-                    <h2 class="chapter-title">El Santuario del Corazón</h2>
-                    <p>"En el Laboratorio del Corazón Ardiente, la ciencia arcana y la magia elemental convergen. Aquí, las geodas son incubadas bajo condiciones extremas de presión y fuego. Es un santuario de tecnología y fe donde cada vibración del ScorchCore acelera el renacimiento de los olvidados".</p>
-                    <div class="img-wrapper"><img src="img/laboratorio.png" class="card-img"></div>
+            <div class="lore-row" data-aos="fade-up">
+                <div class="lore-card-full">
+                    <div class="card-text">
+                        <span class="cap-label" style="color: var(--ice);">CAPÍTULO III</span>
+                        <h2 class="chapter-title">Santuario del Corazón</h2>
+                        <p>En el Scorch Heart-Lab, la tecnología arcana y la magia elemental convergen en perfecta armonía. Las geodas son incubadas en cámaras de presión magmática donde las vibraciones del ScorchCore resuenan con precisión, despertando el instinto dormido de búsqueda y extracción. Cada latido del laboratorio asegura que el CoreMiner nazca con la sintonización perfecta para su elemento.</p>
+                    </div>
+                    <div class="card-image"><img src="img/laboratorio.png"></div>
                 </div>
             </div>
-
-            <div class="lore-card card-right" data-aos="fade-left">
-                <div class="card-inner">
-                    <span class="cap-label">CAPÍTULO IV</span>
-                    <h2 class="chapter-title">El Despertar del Miner</h2>
-                    <p>"La luz cegadora precede al rugido. De la roca fundida surgen los CoreMiners, seres de poder elemental vinculados eternamente al ScorchCore. Ya no son simples guerreros; ahora son los guardianes de la energía, listos para excavar un nuevo destino en las profundidades".</p>
-                    <div class="img-wrapper"><img src="img/coreminer.png" class="card-img"></div>
+            <div class="lore-row" data-aos="fade-up">
+                <div class="lore-card-full reverse">
+                    <div class="card-text">
+                        <span class="cap-label" style="color: var(--fire);">CAPÍTULO IV</span>
+                        <h2 class="chapter-title">El Despertar del Miner</h2>
+                        <p>Cuando la sintonización se completa, la piedra se desgarra bajo una luz fundida. El guerrero emerge transformado en un CoreMiner, una entidad vinculada eternamente al ScorchCore. Han pasado de ser reliquias olvidadas a convertirse en los nuevos pioneros de Lunacia, listos para excavar los tesoros del mundo y liderar la economía del nuevo amanecer ardiente.</p>
+                    </div>
+                    <div class="card-image"><img src="img/coreminer.png"></div>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -70,12 +75,11 @@
         <div class="cave-bg"></div>
         <div class="alforja-content">
             <div class="alforja-header">
-                <p class="final-quote">"La Eco-Estasis ya no es un final, sino la promesa de un nuevo comienzo. Dales a tus compañeros un nuevo propósito glorioso."</p>
-                <h2 class="call-to-action-text">El Núcleo Ardiente espera. ¿Responderás a su llamada?</h2>
+                <p class="final-quote">"La Eco-Estasis ya no es un final, sino la promesa de un nuevo comienzo."</p>
+                <h2 class="call-to-action-text highlight-gold">El Núcleo Ardiente espera.</h2>
             </div>
             <div class="coin-vessel">
-                <div class="fire-glow"></div>
-                <img src="img/core_coin.png" alt="Moneda $CORE" class="spinning-coin-fire">
+                <img src="img/core_coin.png" class="spinning-coin-fire">
             </div>
             <div class="cta-box">
                 <button class="btn-ronin">CONECTAR WALLET</button>
